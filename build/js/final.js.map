@@ -1,0 +1,1 @@
+{"version":3,"sources":["custom.js"],"names":["console","log","sum"],"mappings":"aAAAA,QAAQC,GAAR,CAAY,8BAAZ,EACA,GAAMC,KAAM,oBAAU,IAAV,CAAZ,CAEAF,QAAQC,GAAR,CAAY,gBAAkBC,GAA9B","file":"final.js","sourcesContent":["console.log('testing babel and sourcemaps');\nconst sum = (a, b) => a+b;\n\nconsole.log('sum is a an: ' + sum);\n"],"sourceRoot":"/source/"}
