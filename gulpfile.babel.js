@@ -10,8 +10,8 @@ gulp.task( 'default',
   ['browser-sync'], function(){
     gulp.watch('**/*.scss',
       {cwd: 'src/scss'} ,
-      ['sass','cssmin']);
-  	gulp.watch(  '**/*.js',
+      ['sass']);
+    gulp.watch(  '**/*.js',
       {cwd: 'src/javascript'} ,
       ['scripts']);
     gulp.watch([ '**/*.gif' , '**/*.png' , '**/*.jpg' , '**/*.jpeg' ]
