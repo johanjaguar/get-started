@@ -18,4 +18,12 @@ gulp.task( 'default',
       , {cwd: 'src/images'} ,
       ['imagesmin']
     );
+    gulp.watch(['css/**/*.css', 'js/**/*.js'],
+      {cwd: 'build'} ,
+      ['bs-reload']
+    );
+    gulp.watch("index.html",
+      {cwd: ''} ,
+      ['bs-reload']
+    );
 });

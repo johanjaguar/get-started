@@ -4,6 +4,8 @@ var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
 
 //tarea sass
 gulp.task('sass', function(){
@@ -24,5 +26,6 @@ gulp.task('sass', function(){
 	   .pipe( gulp.dest('build/css/' ))
      .pipe(cssmin())
      .pipe(rename({suffix: '.min'}))
-     .pipe(gulp.dest('build/css/'));
+     .pipe(gulp.dest('build/css/'))
+     .pipe(reload({stream:true}))
 });

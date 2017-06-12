@@ -4,6 +4,8 @@ var concat = require('gulp-concat');
 var util = require('gulp-util');
 var sourcemaps = require("gulp-sourcemaps");
 var babel = require("gulp-babel");
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
 
 gulp.task('scripts', function(){
   return gulp.src( ['angular.js','custom.js'] , {cwd: 'src/javascript'} )
@@ -16,4 +18,5 @@ gulp.task('scripts', function(){
       util.log(util.colors.red('[Error]'),
       err.toString());
     })
+    .pipe(reload({stream:true}))
 });
