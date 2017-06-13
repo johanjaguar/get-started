@@ -1,4 +1,7 @@
-body{
-  background: aliceblue;
-  color: black;
+$aliceblue: #f0f8ff;
+$black: #000;
+
+body {
+  background-color: $aliceblue;
+  color: $black;
 }

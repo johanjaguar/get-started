@@ -10,7 +10,7 @@ var reload = browserSync.reload;
 //tarea sass
 gulp.task('sass', function(){
   //fuente de los archivos
-  gulp.src('**/*.scss', {cwd: 'src/scss'})
+  gulp.src('**/*.s+(a|c)ss', {cwd: 'src/scss'})
     .pipe(sourcemaps.init())
     .pipe(
     	sass({
@@ -19,13 +19,13 @@ gulp.task('sass', function(){
         outputStyle: 'expanded'
 	    }).on('error', sass.logError)
 	  )
-    .pipe(autoprefixer())
-    .pipe(sourcemaps.write('maps'))
 
-	   //destino de los archivos
-	   .pipe( gulp.dest('build/css/' ))
-     .pipe(cssmin())
-     .pipe(rename({suffix: '.min'}))
-     .pipe(gulp.dest('build/css/'))
-     .pipe(reload({stream:true}))
+    .pipe(sourcemaps.write('maps'))
+    .pipe(autoprefixer())
+    //destino de los archivos
+    .pipe( gulp.dest('build/css/' ))
+    .pipe(cssmin())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('build/css/'))
+    .pipe(reload({stream:true}))
 });
