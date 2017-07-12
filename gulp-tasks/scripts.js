@@ -8,7 +8,11 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 gulp.task('scripts', function(){
-  return gulp.src( ['angular.js','custom.js'] , {cwd: 'src/javascript'} )
+  return gulp.src( [
+    'getData.js',
+    'md5.js',
+    'custom.js'
+  ], {cwd: 'src/javascript'} )
     .pipe(sourcemaps.init())
     .pipe(babel({presets: ['babili']}))
     .pipe(concat('final.js'))
@@ -20,3 +24,5 @@ gulp.task('scripts', function(){
     })
     .pipe(reload({stream:true}))
 });
+
+

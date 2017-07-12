@@ -10,6 +10,7 @@ gulp.task('browser-sync', function() {
   browserSync.init(['build/css/*.css', 'build/js/*.js'], {
     server: {
       baseDir: './'
-    }
+    },
+		browser: "firefox"
   });
 });

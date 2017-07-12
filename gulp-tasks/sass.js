@@ -9,19 +9,18 @@ var reload = browserSync.reload;
 
 //tarea sass
 gulp.task('sass', function(){
-  //fuente de los archivos
-  gulp.src('**/*.s+(a|c)ss', {cwd: 'src/scss'})
+    //fuente de los archivos
+    gulp.src('**/*.s+(a|c)ss', {cwd: 'src/scss'})
     .pipe(sourcemaps.init())
     .pipe(
-    	sass({
-        sourceComments: 'map',
-        sourceMap: 'sass',
-        outputStyle: 'expanded'
-	    }).on('error', sass.logError)
-	  )
-
+        sass({ 
+            sourceComments: 'map',
+            sourceMap: 'sass',
+            outputStyle: 'expanded'
+        }).on('error', sass.logError)
+    )
     .pipe(sourcemaps.write('maps'))
-    .pipe(autoprefixer())
+    //.pipe(autoprefixer())
     //destino de los archivos
     .pipe( gulp.dest('build/css/' ))
     .pipe(cssmin())
@@ -29,3 +28,4 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('build/css/'))
     .pipe(reload({stream:true}))
 });
+  
