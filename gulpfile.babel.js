@@ -14,6 +14,9 @@ gulp.task( 'default',
     gulp.watch(  '**/*.js',
       {cwd: 'src/javascript'} ,
       ['scripts']);
+    gulp.watch(  '**/*.pug',
+      {cwd: 'src/views'} ,
+      ['pug']);
     gulp.watch([ '**/*.gif' , '**/*.png' , '**/*.jpg' , '**/*.jpeg' ]
       , {cwd: 'src/images'} ,
       ['imagesmin']
