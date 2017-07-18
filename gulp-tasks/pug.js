@@ -3,6 +3,8 @@ const gulp = require('gulp'),
 
 gulp.task('pug', () => 
 	gulp.src('src/views/*.pug')
-		.pipe(pug())
+		.pipe(pug({
+			pretty: true
+		}))
 		.pipe(gulp.dest('build/html/'))
 );
