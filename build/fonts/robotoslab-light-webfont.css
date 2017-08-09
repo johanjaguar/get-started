@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "RobotoSlab-Light";
+    src: url("robotoslab-light-webfont.eot");
+    src: url("robotoslab-light-webfont.eot?#iefix") format("embedded-opentype"),
+         url("robotoslab-light-webfont.woff2") format("woff2"),
+         url("robotoslab-light-webfont.woff") format("woff"),
+         url("robotoslab-light-webfont.ttf") format("ttf"),
+         url("robotoslab-light-webfont.svg#RobotoSlab-Light") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}

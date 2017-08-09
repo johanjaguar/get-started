@@ -21,6 +21,10 @@ gulp.task( 'default',
       , {cwd: 'src/images'} ,
       ['imagesmin']
     );
+    gulp.watch([ '**/*.otf' , '**/*.ttf', '**/*.woff']
+      , {cwd: 'src/fonts'} ,
+      ['fontgen']
+    );
     gulp.watch(['css/**/*.css', 'js/**/*.js'],
       {cwd: 'build'} ,
       ['bs-reload']
